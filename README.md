@@ -3,16 +3,16 @@
 
 ## Team Info
 - 22471A0533 — **KOYYALAMUDI VENKATA RAMESH** ( [LinkedIn](https://linkedin.com/in/xxxxxxxxxx) )
-_Work Done: xxxxxxxxxx_
+_Work Done: Project lead and coordinator, Designed overall system architecture, Implemented EfficientNet-B0 model using transfer learning, Managed model training, testing, and result analys
 
-- 22471A05XX — **BANGARU SURYA PRASAD** ( [LinkedIn](https://linkedin.com/in/xxxxxxxxxx) )
-_Work Done: xxxxxxxxxx_
+- 22471A0557 — **BANGARU SURYA PRASAD** ( [LinkedIn](https://www.linkedin.com/in/surya-bangaru-4b243a374/) )
+_Work Done: Dataset collection and class selection from PlantVillage, Data preprocessing and augmentation, Assisted in model evaluation and performance comparison
 
-- 22471A05XX — **THULLIBILLI NAGAIAH** ( [LinkedIn](https://linkedin.com/in/xxxxxxxxxx) )
-_Work Done: xxxxxxxxxx_
+- 22471A0561 — **THULLIBILLI NAGAIAH** ( [LinkedIn](https://www.linkedin.com/in/nagaiah-thullibilli-8724a93a6/) )
+_Work Done: Image preprocessing pipeline implementation (resizing, normalization, denoising), Exploratory Data Analysis (EDA), Visualization of dataset distribution and results
 
-- 22471A05XX — **SHAIK ABDUL NABI** ( [LinkedIn](https://linkedin.com/in/xxxxxxxxxx) )
-_Work Done: xxxxxxxxxx_
+- 22471A0547 — **SHAIK ABDUL NABI** ( [LinkedIn](https://www.linkedin.com/in/abdul-nabi-24ba2628b/) )
+_Work Done: Segmentation logic and post-processing, Performance metrics computation (Precision, Recall, F1, AUC), Documentation and report preparation
 
 ---
 
@@ -34,53 +34,95 @@ xxxxxxxxxx
 
 ---
 
-## About the Project
-Give a simple explanation of:
-- What your project does
-- Why it is useful
-- General project workflow (input → processing → model → output)
+🧩 About the Project
+What the Project Does
 
----
+This project automatically detects and classifies plant leaf diseases from images using deep learning and highlights the affected regions.
 
-## Dataset Used
-👉 **[Dataset Name](Dataset URL)**
+Why It Is Useful
 
-**Dataset Details:**
-xxxxxxxxxx
+Enables early disease detection
 
----
+Reduces dependency on agricultural experts
 
-## Dependencies Used
-xxxxxxxxxx, xxxxxxxxxx, xxxxxxxxxx ...
+Helps farmers take timely preventive measures
 
----
+Supports smart and precision agriculture
 
-## EDA & Preprocessing
-xxxxxxxxxx
+🔁 General Project Workflow
 
----
+Input Leaf Image
+→ Image Preprocessing
+→ Feature Extraction
+→ EfficientNet-B0 Model
+→ Disease Classification
+→ Segmentation of Diseased Region
+→ Final Output (Disease type + affected area)
 
-## Model Training Info
-xxxxxxxxxx
+📊 Dataset Used
+👉 PlantVillage Dataset
+🔗 https://www.kaggle.com/datasets/emmarex/plantdisease
+Dataset Details
+Total Images: ~89,000
+Number of Classes: 38 (10 selected for this project)
+Images per Class Used: 200
+Image Type: RGB leaf images
+Includes healthy and diseased plant leaves
 
----
+🧰 Dependencies Used
+Python
+TensorFlow / Keras
+OpenCV (cv2)
+NumPy
+Matplotlib
+scikit-learn
 
-## Model Testing / Evaluation
-xxxxxxxxxx
+🔍 EDA & Preprocessing
+Dataset class distribution analysis
+Images resized to 224×224
+Pixel normalization applied
+CLAHE used for contrast enhancement
+Noise removal and grayscale conversion
+Data augmentation (flip, rotation)
+Removal of duplicate and corrupted images
 
----
+🧪 Model Training Info
+Model: EfficientNet-B0
+Training Type: Supervised learning
+Transfer learning with pretrained weights
+Optimizer: Adam
+Loss Function: Categorical Cross-Entropy
+Training–Validation–Test split applied
+Training performed using Google Colab (GPU)
 
-## Results
-xxxxxxxxxx
+🧾 Model Testing / Evaluation
+Metrics Used
+Accuracy
+Precision
+Recall
+F1-score
+ROC–AUC
+Confusion Matrix
+Evaluation was conducted on unseen test data to ensure generalization.
 
----
+🏆 Results
+Test Accuracy: 97.9%
+Validation Accuracy: 96.2%
+Average Precision: 96%
+Average Recall: 94.2%
+Average F1-score: 95%
+Segmentation Accuracy: >94%
+Strong performance across all disease classes
 
-## Limitations & Future Work
-xxxxxxxxxx
-
----
-
-## Deployment Info
-xxxxxxxxxx
+⚠️ Limitations & Future Work
+Limitations
+Trained on controlled dataset images
+Some disease classes have similar visual patterns
+Outdoor field conditions not included
+Future Work
+Test the system on real-world farm images
+Deploy the model on mobile applications
+Improve segmentation accuracy further
+Extend to more crop types and diseases
 
 ---
